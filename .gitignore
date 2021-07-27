@@ -1,0 +1,10 @@
+.bdep/
+
+# Local default options files.
+#
+.build2/local/
+
+upstream/config.guess
+upstream/config.sub
+upstream/configure
+upstream/install-sh
