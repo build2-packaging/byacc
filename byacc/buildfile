@@ -1,5 +1,4 @@
-./: exe{byacc} doc{README.md CHANGES VERSION} man1{byacc} legal{LICENSE} \
-    manifest
+./: exe{byacc} doc{README.md CHANGES} man1{byacc} legal{LICENSE} manifest
 
 exe{byacc}: {h c}{*}
 

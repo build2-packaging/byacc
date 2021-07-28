@@ -1,5 +1,5 @@
 project = byacc
-version = $process.run(cat $src_root/VERSION)
+version = $process.run(sed -n -e 's/^version: (.+)/\1/p' $src_root/manifest)
 
 dist.package = $project-$version
 
