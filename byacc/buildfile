@@ -3,3 +3,15 @@
 exe{byacc}: {h c}{*}
 
 c.poptions =+ "-I$src_root" -DHAVE_CONFIG_H -DYYPATCH=$version
+
+# Upstream marks noreturn functions with the /*NOTREACHED*/ comment but GCC
+# and Clang issue warnings.
+#
+if ($c.class == 'gcc')
+  c.coptions += -Wno-return-type
+
+# Upstream uses line continuations inside string literals which trip up GCC
+# bug #84583.
+#
+if ($c.target.system == 'mingw32')
+  obj{error verbose}: cc.reprocess = true
