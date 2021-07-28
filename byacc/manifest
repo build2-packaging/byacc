@@ -1,0 +1,15 @@
+: 1
+name: byacc
+version: 20210619
+summary: Berkeley yacc parser generator
+license: other: public domain
+topics: yacc, bison, LALR, parser
+description-file: README.md
+changes-file: CHANGES
+url: https://invisible-island.net/byacc/byacc.html
+package-url: https://github.com/build2-packaging/byacc
+package-email: boris@codesynthesis.com
+build-error-email: builds@build2.org
+builds: host
+depends: * build2 >= 0.14.0-
+depends: * bpkg >= 0.14.0-

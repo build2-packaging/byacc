@@ -1,0 +1,9 @@
+project = byacc
+version = $process.run(cat $src_root/VERSION)
+
+dist.package = $project-$version
+
+using config
+using test
+using install
+using dist

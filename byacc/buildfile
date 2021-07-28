@@ -1,0 +1,6 @@
+./: exe{byacc} doc{README.md CHANGES VERSION} man1{byacc} legal{LICENSE} \
+    manifest
+
+exe{byacc}: {h c}{*}
+
+c.poptions =+ "-I$src_root" -DHAVE_CONFIG_H -DYYPATCH=$version
