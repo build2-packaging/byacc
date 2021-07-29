@@ -20,4 +20,8 @@
 #  ifdef __MINGW32__
 #    define HAVE_GETOPT 1
 #  endif
+/* Note: tmpfile() is unusable on MinGW so we are providing our own. */
+#  include <stdio.h>
+   FILE *mytmpfile ();
+#  define tmpfile mytmpfile
 #endif

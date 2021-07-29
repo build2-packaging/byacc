@@ -1,6 +1,7 @@
 ./: exe{byacc} doc{README.md CHANGES} man1{byacc} legal{LICENSE} manifest
 
-exe{byacc}: {h c}{*}
+exe{byacc}: {h c}{* -win32-tmpfile}
+exe{byacc}: c{win32-tmpfile}: include = ($c.target.class == 'windows')
 
 c.poptions =+ "-I$src_root" -DHAVE_CONFIG_H -DYYPATCH=$version
 
