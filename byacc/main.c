@@ -791,6 +791,16 @@ open_files(void)
 int
 main(int argc, char *argv[])
 {
+    /* Handle --build2-metadata (see also buildfile). */
+    if (argc == 2 && strncmp (argv[1], "--build2-metadata=", 18) == 0) {
+        printf ("# build2 buildfile byacc\n");
+        printf ("export.metadata = 1 byacc\n");
+        printf ("byacc.name = [string] yacc\n");
+        printf ("byacc.version = [string] '%s'\n", CONCAT1("", YYPATCH));
+        printf ("byacc.checksum = [string] '%s'\n", CONCAT1("", YYPATCH));
+        return 0;
+    }
+
     SRexpect = -1;
     RRexpect = -1;
     exit_code = EXIT_SUCCESS;

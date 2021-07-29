@@ -1,5 +1,18 @@
 ./: exe{byacc} doc{README.md CHANGES} man1{byacc} legal{LICENSE} manifest
 
+# Target metadata, see also --build2-metadata in main.c.
+#
+# Note that byacc does not query any environment variables besides TMPDIR and
+# TMP.
+#
+exe{byacc}:
+{
+  export.metadata = 1 byacc
+  byacc.name = [string] yacc
+  byacc.version  = [string] $version
+  byacc.checksum = [string] $version
+}
+
 exe{byacc}: {h c}{* -win32-tmpfile}
 exe{byacc}: c{win32-tmpfile}: include = ($c.target.class == 'windows')
 
