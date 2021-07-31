@@ -4,11 +4,11 @@
 /* Define to maximum table size (default: 32500) */
 #define MAXTABLE INT_MAX
 
-/* Define to 1 if you want to perform memory-leak testing. */
-/* #undef NO_LEAKS */
+/* This makes sure byacc itself doesn't leak. */
+#define NO_LEAKS 1
 
-/* Define to 1 if you want to perform memory-leak testing. */
-/* #undef YY_NO_LEAKS */
+/* This makes sure byacc-generated parser doesn't leak. */
+#define YY_NO_LEAKS 1
 
 #ifndef _WIN32
 #  define HAVE_FCNTL_H 1
