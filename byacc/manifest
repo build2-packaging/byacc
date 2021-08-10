@@ -1,6 +1,6 @@
 : 1
 name: byacc
-version: 20210619
+version: 20210808
 summary: Berkeley yacc parser generator
 license: other: public domain
 topics: yacc, bison, LALR, parser

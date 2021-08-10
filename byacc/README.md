@@ -8,10 +8,9 @@ language. It has a public domain license which includes the generated C.
 This package is configured with backtracking enable which makes it reasonably
 compatible with GNU bison.
 
-Note that for better compatibility with bison, this package has applied a
-patch to support `--defines=<defines_file>` and `--output=<output_file>`
-options as alternatives for `-H <defines_file>` and `-o <output_file>`. For
-example:
+Note that for better compatibility with bison, byacc supports the
+`--defines=<defines_file>` and `--output=<output_file>` options as alternatives
+for `-H <defines_file>` and `-o <output_file>`. For example:
 
 ```
 byacc --defines=parse.h --output=parse.c parse.y

@@ -538,7 +538,7 @@ YYPARSE_DECL()
     yynerrs = 0;
     yyerrflag = 0;
     yychar = YYEMPTY;
-    /* yystate is set below */
+    yystate = 0;
 
 #if YYPURE
     memset(&yystack, 0, sizeof(yystack));
@@ -1045,8 +1045,9 @@ yyreduce:
 case 1:
 #line 12 "err_syntax20.y"
 	{ yystack.l_mark[-1].rechk = 3; }
+#line 1049 "err_syntax20.tab.c"
 break;
-#line 1050 "err_syntax20.tab.c"
+#line 1051 "err_syntax20.tab.c"
     default:
         break;
     }
