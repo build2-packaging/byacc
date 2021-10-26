@@ -15,3 +15,5 @@ for `-H <defines_file>` and `-o <output_file>`. For example:
 ```
 byacc --defines=parse.h --output=parse.c parse.y
 ```
+
+Note also that the `byacc` executable provides `build2` metadata.
